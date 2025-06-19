@@ -1,0 +1,17 @@
+{
+  "name": "challenge-alurageek",
+  "version": "1.0.0",
+  "description": "##  Challenge donde se desarrollará una aplicación para: * listar productos * registrar productos * eliminar productos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx json-server --watch database/db.json --port 3000"
+  },
+  "keywords": [],
+  "author": "José Luis Justiniano Cervera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "json-server": "^1.0.0-beta.1"
+  }
+}
