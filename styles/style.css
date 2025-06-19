@@ -1,0 +1,317 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilos para los títulos principales */
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+}
+
+/* Estilos del encabezado */
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-purple);
+    color: var(--main-white);
+}
+
+/* Contenedor de iconos del menú */
+.menu__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos individuales de los iconos del menú */
+.menu__icon {
+    width: 40px;
+    height: auto;
+}
+
+/* Título del menú */
+.menu__title {
+    flex: 1;
+    text-align: center;
+    font-size: 26px;
+    margin: 0;
+    color: var(--main-white);
+}
+
+/* Estilos para el contenedor principal de la cuadrícula */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Estilos para el título h2 */
+h2 {
+    color: var(--main-black);
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Estilos para el título h3 */
+h3 {
+    color: var(--main-red);
+    font-size: 14px;
+}
+
+/* Estilos para la imagen de error */
+.error-image {
+    width: 60%;
+    height: auto;
+}
+
+/* Sección Cards */
+/* Contenedor de la lista de productos con scroll */
+#list-products {
+    overflow-y: auto;
+    max-height: 510px;
+}
+
+/* Contenedor de la sección de inicio */
+.homeSide {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+    background: var(--main-background);
+    box-shadow: var(--box-shadow);
+}
+
+/* Elemento de ancho completo en la cuadrícula */
+.full-width {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 15px auto 25px;
+}
+
+/* Estilos generales para los formularios */
+form {
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+/* Contenedor de la lista de productos en formato de cuadrícula */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Estilos para los artículos (tarjetas) */
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    background: var(--main-blue);
+    box-shadow: var(--box-shadow);
+    height: fit-content;
+    border-radius: 20px;
+}
+
+/* Estilos de las tarjetas de producto */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    background: var(--main-background);
+    height: 15rem;
+    height: fit-content;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+}
+
+/* Contenedor de imagen de la tarjeta */
+.card-container--img {
+    aspect-ratio: 1/1;
+    height: 11rem;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Información de la tarjeta */
+.card .card-container--info {
+    color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 60px 10px 0 0;
+    width: 100%;
+}
+
+/* Título dentro de la tarjeta */
+.card-container--title {
+    color: var(--main-black);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Contenedor del valor y los iconos de la tarjeta */
+.card-container--value {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Efecto hover en las imágenes de valor de la tarjeta */
+.card-container--value img {
+    transition: transform 0.3s ease;
+}
+
+.card-container--value img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para los iconos interactivos de la tarjeta */
+.card-container--icon {
+    cursor: pointer;
+}
+
+/* Contenedor de la sección de registro */
+.registerSide {
+    background: var(--main-background);
+    padding: 20px;
+    margin: 0;
+    box-shadow: var(--box-shadow);
+}
+
+/* Estilos generales para los formularios  */
+form {
+    width: 100%;
+}
+
+/* Campo individual del formulario */
+.form__field {
+    border: none;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+}
+
+/* Margen inferior para el último campo del formulario */
+.form__field:last-child {
+    margin-bottom: 0;
+}
+
+/* Efecto hover en campos de ancho completo  */
+.full__field:hover {
+    border: 1px solid var(--main-black);
+    box-shadow: none;
+}
+
+/* Ajuste de margen para inputs dentro de un campo */
+.form__field input {
+    margin-right: 10px;
+}
+
+/* Etiqueta de los campos del formulario */
+.field__label {
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 16px;
+    color: var(--main-black)
+}
+
+/* Campos de entrada de texto de ancho completo */
+.full__field {
+    display: block;
+    width: 94%;
+    padding: 1em;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* Efecto hover en campos de entrada de ancho completo */
+.full__field:hover {
+    border: 1px solid var(--main-black);
+}
+
+/* Estilos para el artículo dentro del formulario */
+.Form__article {
+    display: flex;
+    justify-content: space-between;
+    background: var(--main-background);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Estilos generales para los botones del formulario */
+.Form__boton {
+    background: var(--main-blue);
+    display: block;
+    border: none;
+    padding: 1em 4em;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--main-white);
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-top: 2rem;
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+/* Efecto hover para los botones */
+.Form__boton:hover {
+    background: var(--main-blue-hover);
+}
+
+/* Estilo específico para el botón de eliminar */
+#delete {
+    background: var(--main-red);
+}
+
+/* Efecto hover para el botón de eliminar */
+#delete:hover {
+    background: var(--main-red-hover);
+}
+
+/* Mensajes de error del formulario */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .925rem;
+    color: var(--main-red);
+    font-size: 12px;
+}
+
+/* Estilos del pie de página */
+.footer {
+    font-size: 16px;
+    font-weight: medium;
+    text-align: center;
+    background: var(--main-purple);
+    color: var(--main-white);
+    padding: 1em 0;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
