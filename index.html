@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="José Luis Justiniano Cervera">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenge AluraGeek de José Luis JC">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node JS">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/icono.png">
+    <!-- Título -->
+    <title>AluraGeek</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/root.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu__icons">
+            <figure class="menu__icons-container">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 1">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 2">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 3">
+            </figure>
+            <h1 class="menu__title">AluraGeek</h1>
+        </div>
+    </header>
+    <main class="grid-container">
+        <!-- Sección de lista de productos -->
+        <section id="list-products" class="homeSide" data-product>
+            <div class="full-width">
+                <h2>Mis Productos:</h2>
+            </div>
+            <!--Seccion de Cards-->
+        </section>
+        <!-- Sección de Form -->
+        <section class="registerSide">
+            <h2 class="full-width">
+                Agregar producto:
+            </h2>
+            <form class="main__form" data-form>
+
+                <fieldset class="form__field">
+                    <label class="field__label" for="name">Nombre</label>
+                    <input name="name" id="name" class="full__field" type="text"
+                        placeholder="Escribe el nombre del producto" minlength="3" maxlength="100" required data-name>
+                    <span class="error-message"></span>
+                </fieldset>
+                <fieldset class="form__field">
+                    <label class="field__label" for="price">Precio</label>
+                    <input name="price" id="price" class="full__field" type="number"
+                        placeholder="Ingrese el precio del producto en dólares" minlength="1" required data-price>
+                    <span class="error-message"></span>
+                </fieldset>
+                <fieldset class="form__field">
+                    <label class="field__label" for="image">URL de la imagen</label>
+                    <input name="image" id="image" class="full__field" type="url"
+                        placeholder="Ingrese la URL de la imagen" minlength="3" required data-image>
+                    <span class="error-message"></span>
+                </fieldset>
+                <div class="Form__article">
+                    <div class="Form__botones">
+                        <button value="" class="Form__boton" id="send" type="submit">Enviar</button>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="Form__botones">
+                        <button value="" class="Form__boton" id="delete" type="submit">Limpiar</button>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Sección de Footer -->
+    <section class="footer">
+        <div class="menu__icons">
+            <figure class="menu__icons-container">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 1">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 2">
+                <img class="menu__icon" src="./assets/icons/corazon.png" alt="Icono 3">
+            </figure>
+            <h2 class="menu__title">AluraGeek</h2>
+        </div>
+        <div>
+            <p>Desarrollado por José Luis Justiniano Cervera</p>
+            <p>Alura Latam - 2024</p>
+        </div>
+    </section>
+    <!-- JS -->
+    <script src="./js/controllers/main.js" type="module"></script>
+    <script src="./js/validators/formValidator.js" type="module"></script>
+</body>
+
+</html>
