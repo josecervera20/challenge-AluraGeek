@@ -1,0 +1,3 @@
+# Ignora los directorios que contienen dependencias de proyectos y archivos de base de datos locales.
+node_modules/
+database/     
