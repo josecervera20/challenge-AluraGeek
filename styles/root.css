@@ -1,0 +1,15 @@
+/* Variables CSS globales para el tema principal de la aplicación. */
+:root {
+    --main-background: #f9f9f9;
+    --main-white: #FFFFFF;
+    --main-black: #000000;
+    --main-blue: #03318C;
+    --main-blue-hover: #0074D9;
+    --main-purple: #5300C8;
+    --main-red: #FF0000;
+    --main-red-hover: #CC0000;
+    --main-gray: #6f6e6e;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --font-family: 'Arial, sans-serif';
+    --font-title: 'Press Start 2P', sans-serif;
+}
