@@ -59,7 +59,7 @@ const renderProducts = async () => {
       noProductsMessage.classList.add("full-width", "no-products");
       noProductsMessage.innerHTML = `
                 <h3 class="error">No hay productos para mostrar.</h3>
-                <img class="error-image" src="assets/images/sin-conexion.svg" alt="No hay productos">
+                <img class="error-image" src="assets/images/sin-productos.svg" alt="No hay productos">
             `;
       productContainer.appendChild(noProductsMessage);
     }
