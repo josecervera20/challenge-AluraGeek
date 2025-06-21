@@ -133,9 +133,8 @@ article {
     flex-direction: column;
     box-shadow: var(--box-shadow);
     background: var(--main-background);
-    height: 15rem;
     height: fit-content;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     padding: 5px;
 }
 
@@ -194,11 +193,6 @@ article {
     box-shadow: var(--box-shadow);
 }
 
-/* Estilos generales para los formularios  */
-form {
-    width: 100%;
-}
-
 /* Campo individual del formulario */
 .form__field {
     border: none;
@@ -211,12 +205,6 @@ form {
 /* Margen inferior para el último campo del formulario */
 .form__field:last-child {
     margin-bottom: 0;
-}
-
-/* Efecto hover en campos de ancho completo  */
-.full__field:hover {
-    border: 1px solid var(--main-black);
-    box-shadow: none;
 }
 
 /* Ajuste de margen para inputs dentro de un campo */
@@ -240,13 +228,6 @@ form {
     font-size: 13px;
     border: none;
     outline: none;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-/* Efecto hover en campos de entrada de ancho completo */
-.full__field:hover {
-    border: 1px solid var(--main-black);
 }
 
 /* Estilos para el artículo dentro del formulario */
@@ -256,6 +237,7 @@ form {
     background: var(--main-background);
     width: 100%;
     margin-top: 1rem;
+    gap: 10px;
 }
 
 /* Estilos generales para los botones del formulario */
@@ -271,8 +253,8 @@ form {
     cursor: pointer;
     transition: all .3s ease;
     margin-top: 2rem;
-    margin-left: 20px;
-    margin-right: 20px
+    flex: 1;
+    min-width: 120px;
 }
 
 /* Efecto hover para los botones */
@@ -296,9 +278,9 @@ form {
     margin-top: 5px;
     font-weight: 400;
     font-style: italic;
-    font-size: .925rem;
+    font-size: 15px;
     color: var(--main-red);
-    font-size: 12px;
+    padding-left: 0;
 }
 
 /* Estilos del pie de página */
@@ -314,4 +296,212 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Breakpoint para tabletas y pantallas medianas (max-width: 992px) */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+        padding: 15px;
+        grid-gap: 20px;
+        margin: auto;
+        max-width: 98%;
+    }
+
+    #list-products {
+        max-height: 510px;
+        overflow-y: auto;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 5px;
+        padding: 0;
+    }
+
+    .homeSide {
+        padding: 0;
+    }
+
+    .registerSide {
+        padding: 20px;
+    }
+
+    .Form__article {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2rem;
+        gap: 10px;
+    }
+
+    .Form__boton {
+        flex: 1;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 1em 4em;
+        font-size: 14px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    .menu__title {
+        font-size: 24px;
+    }
+
+    .menu__icon {
+        width: 38px;
+    }
+
+    .full__field {
+        width: 94%;
+        padding: 1em;
+        font-size: 13px;
+    }
+
+    .field__label {
+        font-size: 16px;
+    }
+
+    article {
+        margin: 10px;
+        max-width: none;
+        min-height: auto;
+    }
+
+    .card-container--img {
+        height: 11rem;/
+    }
+}
+
+/* Para pantallas de móvil (max-width: 600px) */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        grid-gap: 20px;
+        margin: 10px auto;
+        max-width: 95%;
+    }
+
+    #list-products {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 5px;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    article {
+        max-width: 90%;
+        margin: 10px auto;
+        min-height: 260px;
+    }
+
+    .card-container--img {
+        height: 10rem;
+    }
+
+    .menu__title {
+        font-size: 20px;
+    }
+
+    .menu__icon {
+        width: 30px;
+    }
+
+    .Form__article {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 10px;
+    }
+
+    .Form__boton {
+        flex: 1;
+        width: auto;
+        max-width: none;
+        font-size: 15px;
+        padding: 1em 0.5em;
+        margin: 0;
+    }
+
+    .full__field {
+        font-size: 13px;
+        padding: 0.9em;
+    }
+
+    .field__label {
+        font-size: 14px;
+    }
+
+    .error-message {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 0.8em 0;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 375px) {
+    header {
+        height: 60px;
+    }
+
+    .menu__title {
+        font-size: 15px;
+    }
+
+    .menu__icon {
+        width: 25px;
+    }
+
+    .grid-container {
+        padding: 5px;
+        grid-gap: 15px;
+        margin: 5px auto;
+    }
+
+    .registerSide {
+        padding: 15px;
+    }
+
+    .Form__article {
+        gap: 8px;
+    }
+
+    .Form__boton {
+        padding: 0.8em 0.5em;
+        font-size: 13px;
+    }
+
+    .full__field {
+        padding: 0.7em;
+        font-size: 12px;
+    }
+
+    .field__label {
+        font-size: 13px;
+    }
+
+    article {
+        max-width: 95%;
+        min-height: 240px;
+    }
+
+    .card-container--img {
+        height: 8.5rem;
+    }
+
+    .card-container--title {
+        font-size: 12px;
+    }
+
+    .card-container--value {
+        font-size: 14px;
+    }
 }
