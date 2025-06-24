@@ -7,7 +7,7 @@ const clearButton = document.getElementById("delete");
 /**
  * Crea un elemento de tarjeta (card) para un producto.
  * @param {string} name - El nombre del producto.
- * @param {string} price - El precio del producto.
+ * @param {number} price - El precio del producto.
  * @param {string} image - La URL de la imagen del producto.
  * @param {string} id - El ID único del producto.
  * @returns {HTMLElement} El elemento HTML de la tarjeta del producto.
@@ -15,6 +15,18 @@ const clearButton = document.getElementById("delete");
 function createCard(name, price, image, id) {
   const card = document.createElement("article");
   card.classList.add("card-item");
+
+  // Formateo de precio
+  // Se utiliza Intl.NumberFormat para formatear el precio con comas (separador de miles)
+  // según el locale 'es-MX' (español de México), asegurando al menos 0 y máximo 2 decimales.
+  const formatter = new Intl.NumberFormat("es-MX", {
+    style: "decimal",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  });
+  // Aplica el formato al precio
+  const formattedPrice = formatter.format(price);
+
   card.innerHTML = `
         <figure class="card">
             <img class="card-container--img"
@@ -24,8 +36,7 @@ function createCard(name, price, image, id) {
             <figcaption class="card-container--info">
                 <p class="card-container--title">${name}</p>
                 <div class="card-container--value">
-                    <p>$ ${parseFloat(price).toFixed(2)}</p>
-                    <img class="card-container--icon" src="./assets/icons/borrar.png" data-remove="true" data-id="${id}" alt="Eliminar producto"/>
+                    <p>$ ${formattedPrice}</p> <img class="card-container--icon" src="./assets/icons/borrar.png" data-remove="true" data-id="${id}" alt="Eliminar producto"/>
                 </div>
             </figcaption>
         </figure>
@@ -101,7 +112,9 @@ const handleFormSubmit = async (event) => {
   const imageInput = document.querySelector("[data-image]");
 
   const name = nameInput.value;
-  const price = priceInput.value;
+  // Asegúrate de que el precio se convierta a un número antes de enviarlo
+  // si tu API lo espera como número. JSON Server lo manejará bien.
+  const price = parseFloat(priceInput.value);
   const image = imageInput.value;
 
   try {
