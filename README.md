@@ -167,3 +167,19 @@ Sigue estos sencillos pasos en tu terminal:
 - **VS Code** 📝: Entorno de desarrollo integrado (IDE).
 - **Git** 🌿: Sistema de control de versiones.
 - **GitHub** 🔗: Plataforma para el alojamiento y colaboración de proyectos de código.
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son siempre bienvenidas! Si tienes ideas para mejorar este proyecto, o encuentras algún problema, no dudes en:
+
+1.  Hacer un `fork` del repositorio.
+2.  Crear una nueva rama (`git checkout -b feature/tu-mejora`).
+3.  Enviar un `pull request` con una descripción detallada de tus cambios.
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y se publica bajo la [Licencia MIT](LICENSE). Siéntete libre de usar, modificar y distribuir este código para tus propios proyectos.
